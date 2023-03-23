@@ -1,3 +1,7 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+
 /*Header element*/
 header {
   display: flex;
@@ -22,22 +26,22 @@ header {
   background-color: white;
   color: #212b36;
   padding: 13px;
-  font-size: 13px;
+  font-size: 12px;
   border: none;
   cursor: pointer;
   line-height: 16px;
-  font-family: 'Lato', sans-serif;
   font-weight: 550;
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover,
+.dropbtn:focus {
   background-color: #f4f4f4;
   border-radius: 30px;
 }
 
 .dropdown:not(:nth-child(5)) .dropbtn::after {
-  content: url('./Images/down_arrowhead.png');
+  content: url("./Images/down_arrowhead.svg");
   display: inline-block;
   vertical-align: middle; /*Align arrow to middle of line */
   width: 20px; /* set the width of the image */
@@ -48,7 +52,6 @@ header {
 .dropdown {
   position: relative;
   display: inline-block;
-  font-family: 'Lato', sans-serif;
   font-weight: 550;
 }
 
@@ -56,26 +59,95 @@ header {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  font-size: 13px;
+  border-radius: 10px;
+  padding: 10px 0;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+  color: #212b36;
+  padding: 10px 16px;
   text-decoration: none;
   display: block;
+  border-radius: 10px;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #f4f4f4;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}
+
+/* Style for desktop/laptop */
+.search-bar {
+  display: block;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  padding: 5px;
+  width: 305px;
+  height: 30px;
+}
+
+.search-box input[type="text"] {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+  padding-left: 8px;
+}
+
+.search-box input[type="text"]::placeholder {
+  color: #0b0b0b;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.search-box button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#magnifyingGlassIcon {
+  width: 13px;
+  padding-left: 5px;
+}
+
+#microphoneIcon {
+  width: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .search-bar {
+    display: none;
+  }
+
+  .search-icon {
+    display: block;
+  }
+}
 
 /*Fonts*/
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");

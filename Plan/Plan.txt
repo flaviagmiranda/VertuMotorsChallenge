@@ -28,10 +28,11 @@
                 - Font choice: Lato 📝
                 - Opted to place an image in the down arrowhead instead of the symbol because I could style it better this way. 📝
                 - Functionality: on click, display dropdown list based on https://www.vertumotors.com/'s website. ✅
-                - Responsiveness: Turn into hamburguer menu icon, >left< side of the logo.
-            - Search Bar
-                - Style so both SVG icons fit inside the input element
-                - Responsiveness: Turn into magnifying glass icon for cellphone users
+                - Responsiveness: Turn into hamburguer menu icon, >left< side of the logo. 🔧
+            - Search Bar 🔧
+                - Style so both SVG icons fit inside the input element ✅
+                - Add the microphone functionality to the microphone icon ✅
+                - Responsiveness: Turn into magnifying glass icon for cellphone users 🔧
             - Find us button
                 - magnifying glass icon
                 - text
