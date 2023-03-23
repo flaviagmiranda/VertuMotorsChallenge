@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="icon" type="image/ico" href="./Images/icons/favicon.ico" />
+    <title>Vertu Motors</title>
+  </head>
+  <body>
+    <header>
+      <!-- company logo -->
+      <a href="#">
+      <img id="logo-header" src="./Images/nobg.svg" alt="Vertu Motors Logo" />
+    </a>
+      <div class="dropdownButtons">
+        <!-- new cars button -->
+        <div class="dropdown">
+          <button onclick="toggleDropdown('newCars')" class="dropbtn">
+            New cars
+          </button>
+          <div id="newCars" class="dropdown-content">
+            <a href="#">View All New Cars</a>
+            <a href="#">Manufacturers</a>
+            <a href="#">Available Today</a>
+            <a href="#">Contract Hire</a>
+            <a href="#">Other Manufacturers</a>
+            <a href="#">Lifestyle search</a>
+            <a href="#">Electric Vehicles</a>
+          </div>
+        </div>
+
+        <!-- used cars button -->
+        <div class="dropdown">
+          <button onclick="toggleDropdown('usedCars')" class="dropbtn">
+            Used cars
+          </button>
+          <div id="usedCars" class="dropdown-content">
+            <a href="#">View All Used Cars</a>
+            <a href="#">Manufacturers</a>
+            <a href="#">Approved used</a>
+            <a href="#">Ex Demo Cars</a>
+            <a href="#">Buy Online</a>
+            <a href="#">Reserve Online</a>
+            <a href="#">Sell My Car</a>
+          </div>
+        </div>
+
+        <!-- servicing button -->
+        <div class="dropdown">
+          <button onclick="toggleDropdown('servicing')" class="dropbtn">
+            Servicing
+          </button>
+          <div id="servicing" class="dropdown-content">
+            <a href="#">Service &amp; Repairs</a>
+            <a href="#">Book a Service</a>
+            <a href="#">Book a MOT</a>
+            <a href="#">Tyres</a>
+            <a href="#">Priority Service Plan</a>
+            <a href="#">Seasonal Offers</a>
+            <a href="#">Accident &amp; Repairs</a>
+            <a href="#">Parts &amp; Accessories</a>
+            <a href="#">Accident Assist</a>
+            <a href="#">Electric Cars</a>
+            <a href="#">Manufacturer Offers</a>
+          </div>
+        </div>
+
+        <!-- comercials button -->
+        <div class="dropdown">
+          <button onclick="toggleDropdown('commercials')" class="dropbtn">
+            Commercials
+          </button>
+          <div id="commercials" class="dropdown-content">
+            <a href="#">View All Commercials</a>
+          </div>
+        </div>
+
+        <!-- motability button -->
+        <div class="dropdown">
+          <button onclick="toggleDropdown('motability')" class="dropbtn">
+            Motability
+          </button>
+          <div id="motability" class="dropdown-content"></div>
+        </div>
+      </div>
+    </header>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
