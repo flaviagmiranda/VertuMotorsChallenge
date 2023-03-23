@@ -33,18 +33,18 @@
                 - Style so both SVG icons fit inside the input element ✅
                 - Add the microphone functionality to the microphone icon ✅
                 - Responsiveness: Turn into magnifying glass icon for cellphone users 🔧
-            - Find us button
-                - magnifying glass icon
-                - text
-                - Responsiveness: Display only the magnifying glass icon for cellphone users
-            - Save button
-                - heart icon
-                - text
-                - Responsiveness: Display only heart icon for cellphone users
-            - Login button
-                - person icon
-                - text
-                - Responsiveness: Display only person icon for cellphone users
+            - Find us button 🔧
+                - magnifying glass icon ✅
+                - text ✅
+                - Responsiveness: Display only the magnifying glass icon for cellphone users 🔧
+            - Save button 🔧
+                - heart icon ✅
+                - text ✅
+                - Responsiveness: Display only heart icon for cellphone users 🔧
+            - Login button 🔧
+                - person icon ✅
+                - text ✅
+                - Responsiveness: Display only person icon for cellphone users 🔧
         b. BANNER1:
             - Image ("../Images/Hero-banner-desktop.jpg") and ("../Images/Hero-banner-mobile.jpg")
             - Text

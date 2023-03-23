@@ -8,14 +8,16 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 60px;
 }
 
 /*header logo*/
 #logo-header {
-  width: 110px;
+  width: 100px;
   margin: 10px 0;
 }
 
+/*-----DROPDOWN BUTTONS------*/
 /*Dropdown buttons div element*/
 .dropdownButtons {
   padding: 0 50px;
@@ -25,7 +27,7 @@ header {
 .dropbtn {
   background-color: white;
   color: #212b36;
-  padding: 13px;
+  margin: 5px;
   font-size: 12px;
   border: none;
   cursor: pointer;
@@ -37,7 +39,8 @@ header {
 .dropbtn:hover,
 .dropbtn:focus {
   background-color: #f4f4f4;
-  border-radius: 30px;
+  height: 35px;
+  border-radius: 20px;
 }
 
 .dropdown:not(:nth-child(5)) .dropbtn::after {
@@ -88,6 +91,7 @@ header {
   display: block;
 }
 
+/*-----SEARCH BAR-----*/
 /* Style for desktop/laptop */
 .search-bar {
   display: block;
@@ -100,8 +104,8 @@ header {
   background-color: #f2f2f2;
   border-radius: 25px;
   padding: 5px;
-  width: 305px;
-  height: 30px;
+  width: 300px;
+  height: 27px;
 }
 
 .search-box input[type="text"] {
@@ -114,7 +118,7 @@ header {
 
 .search-box input[type="text"]::placeholder {
   color: #0b0b0b;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 400;
 }
 
@@ -126,8 +130,8 @@ header {
 }
 
 #magnifyingGlassIcon {
-  width: 13px;
-  padding-left: 5px;
+  width: 11px;
+  padding-left: 10px;
 }
 
 #microphoneIcon {
@@ -137,16 +141,50 @@ header {
 }
 
 
-
 @media only screen and (max-width: 767px) {
   .search-bar {
     display: none;
   }
 
-  .search-icon {
+  #microphoneIcon {
+    display: none;
+  }
+
+  #magnifyingGlassIcon {
     display: block;
   }
 }
+
+/*------ HEADER RIGHT-HAND SIDE BUTTONS------*/
+
+.right-hand-side-buttons{
+  display: flex;
+  margin-left: 10px;
+}
+
+#findUsButton, #saveButton, #logInButton {
+  display: flex;
+  flex-direction: column; /* change flex-direction to column */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 50px;
+  font-size: 9px;
+}
+
+#findUsIcon, #saveIcon, #logInIcon {
+  width: 20px;
+}
+
+#findUsIcon {
+  margin: 3px 2px;
+}
+
+#saveIcon, #logInIcon {
+  margin: 6px 2px;
+}
+
 
 /*Fonts*/
 
