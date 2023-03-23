@@ -23,6 +23,7 @@ header {
   padding: 0 50px;
 }
 
+
 /* Dropdown Button */
 .dropbtn {
   background-color: white;
@@ -39,7 +40,7 @@ header {
 .dropbtn:hover,
 .dropbtn:focus {
   background-color: #f4f4f4;
-  height: 35px;
+  height: 30px;
   border-radius: 20px;
 }
 
@@ -47,8 +48,6 @@ header {
   content: url("./Images/down_arrowhead.svg");
   display: inline-block;
   vertical-align: middle; /*Align arrow to middle of line */
-  width: 20px; /* set the width of the image */
-  height: 20px; /* set the height of the image */
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -157,6 +156,7 @@ header {
 
 /*------ HEADER RIGHT-HAND SIDE BUTTONS------*/
 
+
 .right-hand-side-buttons{
   display: flex;
   margin-left: 10px;
@@ -164,26 +164,33 @@ header {
 
 #findUsButton, #saveButton, #logInButton {
   display: flex;
-  flex-direction: column; /* change flex-direction to column */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   width: 50px;
   font-size: 9px;
 }
 
 #findUsIcon, #saveIcon, #logInIcon {
   width: 20px;
+  display: block;
 }
 
 #findUsIcon {
-  margin: 3px 2px;
+  margin: 3px 4.5px;
 }
 
 #saveIcon, #logInIcon {
   margin: 6px 2px;
 }
+
+a {
+  text-decoration: none;
+  color: #212b36
+}
+
+
 
 
 /*Fonts*/
