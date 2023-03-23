@@ -36,7 +36,7 @@ header {
   border-radius: 30px;
 }
 
-.dropdown:not(:nth-child(6)) .dropbtn::after {
+.dropdown:not(:nth-child(5)) .dropbtn::after {
   content: url('./Images/down_arrowhead.png');
   display: inline-block;
   vertical-align: middle; /*Align arrow to middle of line */
