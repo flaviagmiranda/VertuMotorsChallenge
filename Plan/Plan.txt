@@ -48,17 +48,17 @@
             - Phone icon ✅
                 - Responsiveness: Display only to mobile users ✅
 
-        b. MAIN (BANNER1):
-            - Image ("../Images/Hero-banner-desktop.jpg") and ("../Images/Hero-banner-mobile.jpg")
-            - Text
-                - title
-                - body
-            - Button
+        b. MAIN (BANNER1): 🔧
+            - Image ("../Images/Hero-banner-desktop.jpg") and ("../Images/Hero-banner-mobile.jpg") 📝
+            - Text ✅
+                - title  ✅
+                - body  ✅
+            - Button ✅
             - Responsiveness: 
-                - display ("../Images/Hero-banner-mobile.jpg") for cellphone users
-                - Text underneath image for cellphone users
-                - Text centralised
-                - Button taking aprox. 90% width of the page
+                - display ("../Images/Hero-banner-mobile.jpg") for cellphone users 🔧
+                - Text underneath image for cellphone users 🔧
+                - Text centralised 🔧
+                - Button taking aprox. 90% width of the page 🔧
         c. MAIN (CARSDISPLAY):
             - Title
             - Gallery
