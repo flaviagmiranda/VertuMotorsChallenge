@@ -1,3 +1,5 @@
+/* _________HEADER ELEMENT__________ */
+
 /* ----DROPDOWN BUTTONS---- */
 
 // Toggle the specified dropdown content
@@ -53,3 +55,31 @@ function startDictation () {
 
   recognition.start()
 }
+/* ---- HAMBURGUR MENU ICON ----- */
+
+/* Selecting the DOM elements */
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle')
+const mobileMenu = document.querySelector('.mobile-menu')
+const screenSizeThreshold = 768
+
+// Toggles the 'show' class on the mobile menu element when the mobile menu toggle button is clicked
+mobileMenuToggle.addEventListener('click', function () {
+  mobileMenu.classList.toggle('show')
+})
+
+// Removes the 'show' class from the mobile menu element when the user clicks on any part of the page that is not a descendant of the mobile header
+document.addEventListener('click', function (event) {
+  if (!event.target.closest('.mobile-header-left')) {
+    mobileMenu.classList.remove('show')
+  }
+})
+
+// Removes the 'show' class from the mobile menu element when the window is resized and the width is greater than or equal to a threshold value
+window.addEventListener('resize', function () {
+  if (window.innerWidth >= screenSizeThreshold) {
+    mobileMenu.classList.remove('show')
+  }
+})
+
+/* end of the HEADER element */
+/* _________MAIN ELEMENT: BANNER1__________ */

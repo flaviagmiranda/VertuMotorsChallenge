@@ -3,12 +3,20 @@
 }
 
 /*Header element*/
-header {
+nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 60px;
+  overflow: hidden;
+}
+
+.mobile-header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /*header logo*/
@@ -19,10 +27,9 @@ header {
 
 /*-----DROPDOWN BUTTONS------*/
 /*Dropdown buttons div element*/
-.dropdownButtons {
+.desktop-menu {
   padding: 0 70px 0 25px;
 }
-
 
 /* Dropdown Button */
 .dropbtn {
@@ -141,40 +148,36 @@ header {
   cursor: pointer;
 }
 
-
-@media only screen and (max-width: 767px) {
-  .search-bar {
-    display: none;
-  }
-
-  #microphoneIcon {
-    display: none;
-  }
-
-  #magnifyingGlassIcon {
-    display: block;
-  }
-}
-
 /*------ HEADER RIGHT-HAND SIDE BUTTONS------*/
 
-
-.right-hand-side-buttons{
+.right-hand-side-buttons {
   display: flex;
   margin-left: 10px;
 }
 
-#findUsButton, #saveButton, #logInButton {
+#findUsButton,
+#saveButton,
+#logInButton,
+#callButton,
+#magnifyingGlassIconBlack {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 50px;
   font-size: 9px;
 }
 
-#findUsIcon, #saveIcon, #logInIcon {
+#findUsButton,
+#saveButton,
+#logInButton,
+#callButton {
+  width: 50px;
+}
+
+#findUsIcon,
+#saveIcon,
+#logInIcon {
   width: 20px;
   display: block;
 }
@@ -183,18 +186,125 @@ header {
   margin: 3px 4.5px;
 }
 
-#saveIcon, #logInIcon {
+#saveIcon,
+#logInIcon  {
   margin: 6px 2px;
+
+}
+
+#callIcon {
+  display: none;
+  width: 20px;
+}
+
+#magnifyingGlassIconBlackImg {
+  display: none;
+  width: 20px;
 }
 
 a {
   text-decoration: none;
-  color: #212b36
+  color: #212b36;
 }
 
+/*-----HAMBURGUER MENU-------*/
 
+/* Default styles for the mobile menu */
+.mobile-menu {
+  display: none;
+  list-style: none;
+  margin-top: 80px;
+  position: fixed;
+}
 
+/* Show the mobile menu when the 'show' class is added */
+.mobile-menu.show {
+  display: block;
+  margin-left: -8%;
+  margin-top: 250px;
+  padding: 0;
+}
+
+/* Styles for the mobile menu toggle button */
+.mobile-menu-toggle {
+  display: none;
+  margin: 0 20px 0 10px;
+  width: 25px;
+}
+
+.mobilebtn {
+  z-index: 99999;
+  background-color: #f2f2f2;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  width: 100%;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.mobilebtn:hover {
+  background-color: white;
+}
+
+/* Show the mobile menu toggle button when the screen is less than 768px wide */
+@media (max-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #logo-header {
+    width: 115px;
+    margin: 15px 0 0 -5px;
+  }
+
+  .mobile-menu-toggle,
+  #callIcon,
+  #magnifyingGlassIconBlackImg {
+    display: block;
+  }
+
+  #magnifyingGlassIconBlackImg {
+    width: 25px;
+    margin: 10px 2px
+  }
+
+  #saveIcon, #logInIcon, #callIcon {
+    width: 25px;
+  }
+
+#saveButton, #logInButton, #callButton {
+  width: 30px;
+  }
+
+  #findUsButton,
+  .desktop-menu,
+  .search-bar,
+  .right-hand-side-button-text {
+    display: none;
+  }
+}
+
+/*END of the header element*/
+/*main element*/
 
 /*Fonts*/
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+

@@ -10,133 +10,175 @@
   </head>
   <body>
     <header>
-      <!-- company logo -->
-      <a href="#">
-        <img id="logo-header" src="./Images/nobg.svg" alt="Vertu Motors Logo" />
-      </a>
-      <div class="dropdownButtons">
-        <!-- new cars button -->
-        <div class="dropdown">
-          <button onclick="toggleDropdown('newCars')" class="dropbtn">
-            New cars
-          </button>
-          <div id="newCars" class="dropdown-content">
-            <a href="#">View All New Cars</a>
-            <a href="#">Manufacturers</a>
-            <a href="#">Available Today</a>
-            <a href="#">Contract Hire</a>
-            <a href="#">Other Manufacturers</a>
-            <a href="#">Lifestyle search</a>
-            <a href="#">Electric Vehicles</a>
+      <nav>
+        <div class="mobile-header-left">
+          <!-- mobile menu toggle -->
+          <img
+            src="./Images/hamburguer_menu_icon.svg"
+            alt="hamburguer menu icon"
+            class="mobile-menu-toggle"
+          />
+          <ul class="mobile-menu">
+            <li><a href="#" class="mobilebtn">New cars</a></li>
+            <li><a href="#" class="mobilebtn">Used cars</a></li>
+            <li><a href="#" class="mobilebtn">Servicing</a></li>
+            <li><a href="#" class="mobilebtn">Commercials</a></li>
+            <li><a href="#" class="mobilebtn">Motability</a></li>
+          </ul>
+
+          <!-- company logo -->
+          <a href="#">
+            <img
+              id="logo-header"
+              src="./Images/nobg.svg"
+              alt="Vertu Motors Logo"
+            />
+          </a>
+        </div>
+        <div class="desktop-menu">
+          <!-- new cars button -->
+          <div class="dropdown">
+            <button onclick="toggleDropdown('newCars')" class="dropbtn">
+              New cars
+            </button>
+            <div id="newCars" class="dropdown-content">
+              <a href="#">View All New Cars</a>
+              <a href="#">Manufacturers</a>
+              <a href="#">Available Today</a>
+              <a href="#">Contract Hire</a>
+              <a href="#">Other Manufacturers</a>
+              <a href="#">Lifestyle search</a>
+              <a href="#">Electric Vehicles</a>
+            </div>
+          </div>
+
+          <!-- used cars button -->
+          <div class="dropdown">
+            <button onclick="toggleDropdown('usedCars')" class="dropbtn">
+              Used cars
+            </button>
+            <div id="usedCars" class="dropdown-content">
+              <a href="#">View All Used Cars</a>
+              <a href="#">Manufacturers</a>
+              <a href="#">Approved used</a>
+              <a href="#">Ex Demo Cars</a>
+              <a href="#">Buy Online</a>
+              <a href="#">Reserve Online</a>
+              <a href="#">Sell My Car</a>
+            </div>
+          </div>
+
+          <!-- servicing button -->
+          <div class="dropdown">
+            <button onclick="toggleDropdown('servicing')" class="dropbtn">
+              Servicing
+            </button>
+            <div id="servicing" class="dropdown-content">
+              <a href="#">Service &amp; Repairs</a>
+              <a href="#">Book a Service</a>
+              <a href="#">Book a MOT</a>
+              <a href="#">Tyres</a>
+              <a href="#">Priority Service Plan</a>
+              <a href="#">Seasonal Offers</a>
+              <a href="#">Accident &amp; Repairs</a>
+              <a href="#">Parts &amp; Accessories</a>
+              <a href="#">Accident Assist</a>
+              <a href="#">Electric Cars</a>
+              <a href="#">Manufacturer Offers</a>
+            </div>
+          </div>
+
+          <!-- commercials button -->
+          <div class="dropdown">
+            <button onclick="toggleDropdown('commercials')" class="dropbtn">
+              Commercials
+            </button>
+            <div id="commercials" class="dropdown-content">
+              <a href="#">View All Commercials</a>
+            </div>
+          </div>
+
+          <!-- motability button -->
+          <div class="dropdown">
+            <button onclick="toggleDropdown('motability')" class="dropbtn">
+              Motability
+            </button>
+            <div id="motability" class="dropdown-content"></div>
           </div>
         </div>
 
-        <!-- used cars button -->
-        <div class="dropdown">
-          <button onclick="toggleDropdown('usedCars')" class="dropbtn">
-            Used cars
-          </button>
-          <div id="usedCars" class="dropdown-content">
-            <a href="#">View All Used Cars</a>
-            <a href="#">Manufacturers</a>
-            <a href="#">Approved used</a>
-            <a href="#">Ex Demo Cars</a>
-            <a href="#">Buy Online</a>
-            <a href="#">Reserve Online</a>
-            <a href="#">Sell My Car</a>
-          </div>
+        <!-- seach bar -->
+        <div class="search-bar">
+          <form>
+            <div class="search-box">
+              <a href="#"
+                ><img
+                  id="magnifyingGlassIcon"
+                  src="./Images/magglass_icon.svg"
+                  alt="magnifying glass icon"
+              /></a>
+              <input
+                type="text"
+                placeholder="Search: “Make, model or location”"
+              />
+              <img
+                id="microphoneIcon"
+                src="./Images/microphone_icon.svg"
+                alt="microphone icon"
+              />
+            </div>
+          </form>
         </div>
 
-        <!-- servicing button -->
-        <div class="dropdown">
-          <button onclick="toggleDropdown('servicing')" class="dropbtn">
-            Servicing
-          </button>
-          <div id="servicing" class="dropdown-content">
-            <a href="#">Service &amp; Repairs</a>
-            <a href="#">Book a Service</a>
-            <a href="#">Book a MOT</a>
-            <a href="#">Tyres</a>
-            <a href="#">Priority Service Plan</a>
-            <a href="#">Seasonal Offers</a>
-            <a href="#">Accident &amp; Repairs</a>
-            <a href="#">Parts &amp; Accessories</a>
-            <a href="#">Accident Assist</a>
-            <a href="#">Electric Cars</a>
-            <a href="#">Manufacturer Offers</a>
-          </div>
-        </div>
+        <!-- right-hand side buttons -->
 
-        <!-- comercials button -->
-        <div class="dropdown">
-          <button onclick="toggleDropdown('commercials')" class="dropbtn">
-            Commercials
-          </button>
-          <div id="commercials" class="dropdown-content">
-            <a href="#">View All Commercials</a>
-          </div>
-        </div>
-
-        <!-- motability button -->
-        <div class="dropdown">
-          <button onclick="toggleDropdown('motability')" class="dropbtn">
-            Motability
-          </button>
-          <div id="motability" class="dropdown-content"></div>
-        </div>
-      </div>
-
-      <!-- seach bar -->
-      <div class="search-bar">
-        <form>
-          <div class="search-box">
+        <div class="right-hand-side-buttons">
+          <div id="magnifyingGlassIconBlack">
             <a href="#"
               ><img
-                id="magnifyingGlassIcon"
-                src="./Images/magglass_icon.svg"
+                id="magnifyingGlassIconBlackImg"
+                class="magnifyingGlassIcon_mobile-view"
+                src="./Images/magglass_icon_black.svg"
                 alt="magnifying glass icon"
             /></a>
-            <input
-              type="text"
-              placeholder="Search: “Make, model or location”"
-            />
-            <img
-              id="microphoneIcon"
-              src="./Images/microphone_icon.svg"
-              alt="microphone icon"
-            />
           </div>
-        </form>
-      </div>
-      <div class="search-icon">
-        <i class="fa fa-search"></i>
-      </div>
+          <div id="findUsButton">
+            <a href="#">
+              <img id="findUsIcon" src="./Images/findme.svg" alt="pin icon" />
+              <span class="right-hand-side-button-text">Find us</span>
+            </a>
+          </div>
 
-      <!-- right-hand side buttons -->
+          <div id="saveButton">
+            <a href="#">
+              <img id="saveIcon" src="./Images/save.svg" alt="heart icon" />
+              <span class="right-hand-side-button-text">Save</span>
+            </a>
+          </div>
 
-      <div class="right-hand-side-buttons">
-        <div id="findUsButton">
-          <a href="#">
-            <img id="findUsIcon" src="./Images/findme.svg" alt="pin icon" />
-            <span class="right-hand-side-button-text">Find us</span>
-          </a>
+          <div id="logInButton">
+            <a href="#">
+              <img id="logInIcon" src="./Images/login.svg" alt="user icon" />
+              <span class="right-hand-side-button-text">Log in</span>
+            </a>
+          </div>
+
+          <div id="callButton">
+            <a href="#">
+              <img
+                id="callIcon"
+                src="./Images/phone_icon.svg"
+                alt="phone icon"
+              />
+            </a>
+          </div>
         </div>
-
-        <div id="saveButton">
-          <a href="#">
-            <img id="saveIcon" src="./Images/save.svg" alt="heart icon" />
-            <span class="right-hand-side-button-text">Save</span>
-          </a>
-        </div>
-
-        <div id="logInButton">
-          <a href="#">
-            <img id="logInIcon" src="./Images/login.svg" alt="user icon" />
-            <span class="right-hand-side-button-text">Log in</span>
-          </a>
-        </div>
-      </div>
+      </nav>
     </header>
+
+    <main class="banner1">
+      
+    </main>
 
     <script src="/script.js"></script>
   </body>
