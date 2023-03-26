@@ -513,13 +513,13 @@ a {
 .cardimg {
   width: 90%;
   height: 150px;
-  object-fit: cover; 
-  object-position: center; 
+  object-fit: cover;
+  object-position: center;
   align-self: center;
 }
 
 .card-car-name,
-.card-car-price{
+.card-car-price {
   margin: 15px 25px 10px 25px;
 }
 
@@ -543,7 +543,7 @@ a {
 }
 
 .card-car-properties li::marker {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 .item {
@@ -558,12 +558,6 @@ a {
   background-color: white;
 }
 
-.current-item {
-  /* opacity: 1; */
-}
-
-/* Hide scrollbar for IE, Edge and
-Fine€Gox */
 .gallery-wrapper::-webkit-scrollbar {
   display: none;
 }
@@ -571,6 +565,84 @@ Fine€Gox */
 .gallery-wrapper {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    position: relative;
+    padding: 0px;
+    width: 100%;
+    margin: 0 0px;
+    background-color: #ffffff;
+  }
+
+  .title-carousel {
+    margin-top: 30px;
+    font-size: 30px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .gallery-wrapper {
+    /* border: 2px solid blue; */
+    margin-top: 0;
+    overflow-y: auto;
+    margin-left: -6%;
+    width: 100%;
+    height: 500px;
+  }
+
+  .gallery {
+    /* border: 2px solid red; */
+    display: flex;
+    margin: 0 0 0 0;
+    flex-flow: column nowrap;
+    /* gap: 15px; */
+  }
+
+  .arrow-left,
+  .arrow-right {
+    display: none;
+  }
+
+  .cardimg {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    align-self: center;
+  }
+
+  .card-car-name,
+  .card-car-price {
+    margin: 15px 15px 10px 15px;
+  }
+
+  .card-car-name {
+    font-size: 20px;
+  }
+
+  .card-car-price {
+    margin-top: 0;
+    font-weight: 200;
+    font-size: 14px;
+  }
+
+  .card-car-properties {
+    margin-left: -15px;
+    font-size: 13px;
+  }
+
+  .item {
+    width: 99%;
+    height: 430px;
+    margin: 2px;
+  }
+
+  .mobile-no-show {
+    display: none;
+  }
 }
 
 /*Fonts*/

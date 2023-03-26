@@ -131,4 +131,16 @@ controls.forEach((control) => {
     // Add the 'current-item' class to the current item
     items[currentItem].classList.add('current-item')
   })
+
+  const arrowLeft = document.querySelector('.arrow-left')
+  const cards = document.querySelectorAll('.card')
+  cards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+      if (index < 3) {
+        arrowLeft.classList.add('show-arrow-left')
+      } else {
+        arrowLeft.classList.remove('show-arrow-left')
+      }
+    })
+  })
 })
