@@ -3,6 +3,9 @@
 /* ----DROPDOWN BUTTONS---- */
 
 // Toggle the specified dropdown content
+/* end of the HEADER element */
+/* _________MAIN ELEMENT: BANNER2__________ */
+
 function toggleDropdown (dropdownId) {
   const dropdown = document.getElementById(dropdownId)
   const dropdowns = document.getElementsByClassName('dropdown-content')
@@ -57,7 +60,7 @@ function startDictation () {
 }
 /* ---- HAMBURGUR MENU ICON ----- */
 
-/* Selecting the DOM elements */
+// Selecting the DOM elements
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle')
 const mobileMenu = document.querySelector('.mobile-menu')
 const screenSizeThreshold = 768
@@ -81,5 +84,51 @@ window.addEventListener('resize', function () {
   }
 })
 
-/* end of the HEADER element */
-/* _________MAIN ELEMENT: BANNER1__________ */
+/* CARSDISPLAY */
+
+// Selects both arrow buttons
+const controls = document.querySelectorAll('.control')
+// Set currentItem to 0 - currentItem is the selected card at the moment
+let currentItem = 0
+// Select all elements with the class 'item' (cards)
+const items = document.querySelectorAll('.item')
+// Get the total number of items
+const maxItems = items.length
+
+// For each element with the class 'control', add a click event listener
+controls.forEach((control) => {
+  control.addEventListener('click', () => {
+    // Check if the clicked control has the class 'arrow-left'
+    const isLeft = control.classList.contains('arrow-left')
+
+    // If the clicked control is the left arrow, decrement the current item index
+    if (isLeft) {
+      currentItem -= 1
+    } else {
+      // Otherwise, increment the current item index
+      currentItem += 1
+    }
+
+    // If the current item index is greater than or equal to the total number of items, set it back to 0
+    if (currentItem >= maxItems) {
+      currentItem = 0
+    }
+
+    // If the current item index is less than 0, set it to the index of the last item
+    if (currentItem < 0) {
+      currentItem = maxItems - 1
+    }
+
+    // Remove the 'current-item' class from all items
+    items.forEach((item) => item.classList.remove('current-item'))
+
+    // Scroll the current item smoothly into view with the 'scrollIntoView' method
+    items[currentItem].scrollIntoView({
+      inline: 'center', // horizontally center the item within the scrollable area
+      behavior: 'smooth' // animate the scrolling smoothly
+    })
+
+    // Add the 'current-item' class to the current item
+    items[currentItem].classList.add('current-item')
+  })
+})

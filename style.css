@@ -312,7 +312,7 @@ a {
 }
 
 /*END of the header element*/
-/*main element*/
+/*main element: BANNER1*/
 
 .banner1 {
   display: flex;
@@ -405,7 +405,7 @@ a {
   }
 
   #banner1img {
-    background-image: url('./Images/Hero-banner-mobile.jpg');
+    background-image: url("./Images/Hero-banner-mobile.jpg");
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -416,7 +416,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 0; 
+    margin-left: 0;
     margin-top: 57%;
     width: 100%;
     height: 300px;
@@ -444,54 +444,134 @@ a {
   }
 }
 
+/*END of BANNER1*/
+/*main: CARSDISPLAY*/
 
-/* @media (max-width: 768px) {
-  * {
-    margin: 0;
-  }
+.container {
+  position: relative;
+  padding: 15px;
+  width: 1220px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
 
-  .banner1 {
-    display: block;
-    justify-content: center;
-    position: relative;
-  }
+.title-carousel {
+  margin-top: 50px;
+  font-size: 25px;
+  margin-left: 45px;
+}
 
-  #banner1img {
-    background-image: url('./Images/Hero-banner-mobile.jpg');
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+.gallery-wrapper {
+  overflow-x: auto;
+  margin-top: -20px;
+}
 
-  .banner1Text {
-    background-color: #222222;
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 0;
-    margin-top: 50%;
-    width: 100%;
-    height: 300px;
-    text-align: center;
-  }
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 20px;
+  margin-top: 27%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: #4c4c4c;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  /* opacity: 0.5;
+  transition: all 600ms ease-in-out; */
+  font-size: 12px;
+}
 
-  #banner1Title {
-    font-size: 30px;
-    margin: 0 70px 10px 70px;
-  }
+.arrow-left {
+  margin-left: 40px;
+}
 
-  #banner1Body {
-    font-weight: 200;
-    margin: 0 20px;
-    line-height: 22px;
-  }
+.arrow-right {
+  left: auto;
+  right: 0;
+  margin-right: 10px;
+}
 
-  #banner1Button {
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+}
 
-  }
+.cardimg {
+  width: 90%;
+  height: 150px;
+  object-fit: cover; 
+  object-position: center; 
+  align-self: center;
+}
 
-} */
+.card-car-name,
+.card-car-price{
+  margin: 15px 25px 10px 25px;
+}
+
+.card-car-name {
+  font-size: 20px;
+}
+
+.card-car-price {
+  margin-top: 0;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.card-car-properties {
+  margin-top: 5px;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 25px;
+  list-style: disc;
+  color: black;
+}
+
+.card-car-properties li::marker {
+    font-size: 0.8em;
+}
+
+.item {
+  width: 380px;
+  height: 430px;
+  flex-shrink: 0;
+  transition: all 600ms ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.current-item {
+  /* opacity: 1; */
+}
+
+/* Hide scrollbar for IE, Edge and
+Fine€Gox */
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 /*Fonts*/
 
