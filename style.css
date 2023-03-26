@@ -11,6 +11,16 @@ body {
 }
 
 /*Header element*/
+
+header {
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  top: 0;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -19,7 +29,6 @@ nav {
   margin-top: 40px;
   margin-bottom: 5px;
   height: 60px;
-  /* border: 2px solid red; */
 }
 
 .mobile-header-left {
@@ -52,7 +61,6 @@ nav {
   cursor: pointer;
   line-height: 16px;
   font-weight: 550;
-  /* border: 2px solid blue; */
 }
 
 /* Dropdown button on hover & focus */
@@ -325,6 +333,7 @@ a {
   align-items: center;
   position: relative;
   width: 100%;
+  margin-top: 6%;
 }
 
 #banner1img {
@@ -495,8 +504,6 @@ a {
   background-color: #ffffff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  /* opacity: 0.5;
-  transition: all 600ms ease-in-out; */
   font-size: 12px;
 }
 
@@ -591,7 +598,6 @@ a {
   }
 
   .gallery-wrapper {
-    /* border: 2px solid blue; */
     margin-top: 0;
     overflow-y: auto;
     margin-left: -6%;
@@ -600,11 +606,9 @@ a {
   }
 
   .gallery {
-    /* border: 2px solid red; */
     display: flex;
     margin: 0 0 0 0;
     flex-flow: column nowrap;
-    /* gap: 15px; */
   }
 
   .arrow-left,
@@ -796,16 +800,18 @@ a {
 .banner3SubSections {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;;
 }
 
-.banner3Time, .banner3number {
+.banner3Time,
+.banner3number {
   font-size: 40px;
   margin: 0;
 }
 
-.banner3TimeText, .banner3numberText {
+.banner3TimeText,
+.banner3numberText {
   font-size: 13px;
   font-weight: 200;
 }
@@ -853,6 +859,73 @@ a {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+  .banner3 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .banner3Text {
+    width: 90%;
+    margin: 20px 0 50px 0;
+  }
+
+  .banner3-title {
+    width: 100%;
+    font-size: 32px;
+  }
+
+  .banner3-body {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 1.7;
+    width: 96%;
+    margin: 10px 0;
+  }
+
+  .banner3SubSections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .banner3Time,
+  .banner3number {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .banner3number {
+    margin-top: 0;
+  }
+
+  .banner3TimeText,
+  .banner3numberText {
+    font-size: 15px;
+    font-weight: 200;
+    margin: 5px 0 20px 0;
+  }
+
+  .banner3TimeText {
+    width: 170px;
+  }
+
+  .banner3numberText {
+    margin-right: 0px;
+  }
+
+  #banner3-picture {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  #banner3Button {
+    width: 100%;
+  }
 }
 
 /*Fonts*/
