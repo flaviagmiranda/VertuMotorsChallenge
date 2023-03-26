@@ -131,16 +131,37 @@ controls.forEach((control) => {
     // Add the 'current-item' class to the current item
     items[currentItem].classList.add('current-item')
   })
-
-  const arrowLeft = document.querySelector('.arrow-left')
-  const cards = document.querySelectorAll('.card')
-  cards.forEach((card, index) => {
-    card.addEventListener('click', () => {
-      if (index < 3) {
-        arrowLeft.classList.add('show-arrow-left')
-      } else {
-        arrowLeft.classList.remove('show-arrow-left')
-      }
-    })
-  })
 })
+
+/* BANNER2  */
+
+const spanTextElement = document.getElementById('text-content')
+
+function updateText () {
+  if (window.innerWidth < 768) {
+    spanTextElement.innerText =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis'
+  } else {
+    spanTextElement.innerText =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  }
+}
+
+window.addEventListener('resize', updateText)
+
+updateText()
+
+// Change the banner2 button text deppending on screen size
+const spanButtonElement = document.getElementById('button-content')
+
+function updateButtonText () {
+  if (window.innerWidth < 768) {
+    spanButtonElement.innerText = 'Book a test drive'
+  } else {
+    spanButtonElement.innerText = 'Request a Personalised Video'
+  }
+}
+
+window.addEventListener('resize', updateButtonText)
+
+updateButtonText()

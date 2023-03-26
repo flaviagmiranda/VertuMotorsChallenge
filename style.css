@@ -4,6 +4,10 @@
 
 body {
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Header element*/
@@ -319,7 +323,8 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: relative; /* add position relative to parent element */
+  position: relative;
+  width: 100%;
 }
 
 #banner1img {
@@ -444,8 +449,8 @@ a {
   }
 }
 
-/*END of BANNER1*/
-/*main: CARSDISPLAY*/
+/*END of the BANNER1 element*/
+/*main element: CARSDISPLAY*/
 
 .container {
   position: relative;
@@ -480,7 +485,7 @@ a {
   right: auto;
   bottom: 0;
   font-size: 20px;
-  margin-top: 27%;
+  margin-top: 25%;
   width: 30px;
   height: 30px;
   text-align: center;
@@ -497,6 +502,7 @@ a {
 
 .arrow-left {
   margin-left: 40px;
+  display: none;
 }
 
 .arrow-right {
@@ -590,7 +596,7 @@ a {
     overflow-y: auto;
     margin-left: -6%;
     width: 100%;
-    height: 500px;
+    height: 1350px;
   }
 
   .gallery {
@@ -644,6 +650,118 @@ a {
     display: none;
   }
 }
+
+/*END of the CARSDISPLAY element*/
+/*main element: BANNER2*/
+
+.banner2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededed;
+  width: 85%;
+}
+
+.banner2Text {
+  margin-left: 30px;
+  width: 450px;
+}
+
+.banner2-title {
+  width: 450px;
+  font-size: 35px;
+  color: #222222;
+}
+
+.banner2-body {
+  font-size: 13px;
+  font-weight: 200;
+  line-height: 1.7;
+  width: 450px;
+}
+
+#banner2-picture {
+  width: 550px;
+  margin: 50px 0;
+  margin-left: 170px;
+  padding-left: 30px;
+  border-radius: 10px;
+  padding: 0;
+}
+
+#banner2Button {
+  width: 210px;
+
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #00e3c9;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #024444;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  height: 44px;
+  line-height: 1.15;
+  margin-top: 5px;
+  outline: none;
+  padding: 0 5px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all 0.2s, box-shadow 0.08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+  .banner2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .banner2Text {
+    width: 90%;
+    margin: 20px 0 30px 0;
+  }
+  
+  .banner2-title {
+    width: 100%;
+    font-size: 30px;
+    color: #222222;
+    margin-bottom: 20px;
+  }
+  
+  .banner2-body {
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.7;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  
+  #banner2-picture {
+    width: 100%;
+    margin: 0 0;
+    border-radius: 0px;
+    padding: 0;
+  }
+  
+  #banner2Button {
+    width: 100%;
+  }
+
 
 /*Fonts*/
 
