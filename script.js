@@ -135,6 +135,7 @@ controls.forEach((control) => {
 
 /* BANNER2  */
 
+// Change the banner2 body text deppending on screen size
 const spanTextElement = document.getElementById('text-content')
 
 function updateText () {

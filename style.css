@@ -682,7 +682,7 @@ a {
 }
 
 #banner2-picture {
-  width: 550px;
+  width: 600px;
   margin: 50px 0;
   margin-left: 170px;
   padding-left: 30px;
@@ -730,19 +730,19 @@ a {
     width: 100%;
     margin-top: 20px;
   }
-  
+
   .banner2Text {
     width: 90%;
     margin: 20px 0 30px 0;
   }
-  
+
   .banner2-title {
     width: 100%;
     font-size: 30px;
     color: #222222;
     margin-bottom: 20px;
   }
-  
+
   .banner2-body {
     font-size: 14px;
     font-weight: 200;
@@ -750,18 +750,110 @@ a {
     width: 90%;
     margin-bottom: 20px;
   }
-  
+
   #banner2-picture {
     width: 100%;
     margin: 0 0;
     border-radius: 0px;
     padding: 0;
   }
-  
+
   #banner2Button {
     width: 100%;
   }
+}
 
+/*END of the BANNER2 element*/
+/*main element: BANNER3*/
+
+.banner3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #222222;
+  width: 85%;
+  color: #ffffff;
+}
+
+.banner3Text {
+  margin-left: 30px;
+  width: 450px;
+}
+
+.banner3-title {
+  width: 450px;
+  font-size: 35px;
+}
+
+.banner3-body {
+  font-size: 13px;
+  font-weight: 200;
+  line-height: 1.7;
+  width: 510px;
+}
+
+.banner3SubSections {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.banner3Time, .banner3number {
+  font-size: 40px;
+  margin: 0;
+}
+
+.banner3TimeText, .banner3numberText {
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.banner3TimeText {
+  width: 150px;
+}
+
+.banner3numberText {
+  margin-right: 80px;
+}
+
+#banner3-picture {
+  width: 600px;
+  margin: 70px 50px 70px -30px;
+  border-radius: 10px;
+  padding: 0;
+}
+
+#banner3Button {
+  width: 150px;
+
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #00e3c9;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #024444;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  height: 44px;
+  line-height: 1.15;
+  margin-top: 5px;
+  outline: none;
+  padding: 0 5px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all 0.2s, box-shadow 0.08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
 /*Fonts*/
 
