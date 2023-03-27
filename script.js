@@ -72,7 +72,7 @@ mobileMenuToggle.addEventListener('click', function () {
 
 // Removes the 'show' class from the mobile menu element when the user clicks on any part of the page that is not a descendant of the mobile header
 document.addEventListener('click', function (event) {
-  if (!event.target.closest('.mobile-header-left')) {
+  if (!event.target.closest('.hamburguer-menu')) {
     mobileMenu.classList.remove('show')
   }
 })
@@ -86,50 +86,39 @@ window.addEventListener('resize', function () {
 
 /* CARSDISPLAY */
 
-// Selects both arrow buttons
-const controls = document.querySelectorAll('.control')
-// Set currentItem to 0 - currentItem is the selected card at the moment
-let currentItem = 0
-// Select all elements with the class 'item' (cards)
-const items = document.querySelectorAll('.item')
-// Get the total number of items
-const maxItems = items.length
+const carousel = document.querySelector('.gallery-wrapper')
+const cards = document.querySelectorAll('.item')
+const buttonLeft = document.querySelector('.arrow-left')
+const buttonRight = document.querySelector('.arrow-right')
 
-// For each element with the class 'control', add a click event listener
-controls.forEach((control) => {
-  control.addEventListener('click', () => {
-    // Check if the clicked control has the class 'arrow-left'
-    const isLeft = control.classList.contains('arrow-left')
+let scrollPosition = 0
+const cardWidth = cards[0].getBoundingClientRect().width + 10 // Calculate the width of a single card by getting the bounding rectangle of the first card and adding a margin of 10 pixels
 
-    // If the clicked control is the left arrow, decrement the current item index
-    if (isLeft) {
-      currentItem -= 1
-    } else {
-      // Otherwise, increment the current item index
-      currentItem += 1
-    }
+buttonLeft.addEventListener('click', () => {
+  scrollPosition -= cardWidth * 3
+  carousel.scrollTo({
+    left: scrollPosition,
+    behavior: 'smooth'
+  })
+  if (scrollPosition === 0) {
+    buttonLeft.style.display = 'none'
+  }
+})
 
-    // If the current item index is greater than or equal to the total number of items, set it back to 0
-    if (currentItem >= maxItems) {
-      currentItem = 0
-    }
-
-    // If the current item index is less than 0, set it to the index of the last item
-    if (currentItem < 0) {
-      currentItem = maxItems - 1
-    }
-
-    // Remove the 'current-item' class from all items
-    items.forEach((item) => item.classList.remove('current-item'))
-
-    // Scroll the current item smoothly into view with the 'scrollIntoView' method
-    items[currentItem].scrollIntoView({
-      inline: 'center', // horizontally center the item within the scrollable area
-      behavior: 'smooth' // animate the scrolling smoothly
-    })
-
-    // Add the 'current-item' class to the current item
-    items[currentItem].classList.add('current-item')
+buttonRight.addEventListener('click', () => {
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth
+  if (scrollPosition + cardWidth * 3 <= maxScroll) {
+    // if there are more items to the right
+    scrollPosition += cardWidth * 3
+    buttonLeft.style.display = 'block'
+  } else {
+    // if there are no more items to the right, scroll to the first item
+    scrollPosition = 0
+    buttonLeft.style.display = 'none'
+  }
+  carousel.scrollTo({
+    left: scrollPosition,
+    behavior: 'smooth'
   })
 })
 
