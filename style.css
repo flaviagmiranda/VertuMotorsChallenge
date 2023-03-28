@@ -135,6 +135,7 @@ nav {
   padding: 5px;
   width: 280px;
   height: 27px;
+  margin-left: 25%;
 }
 
 .search-box input[type="text"] {
@@ -158,12 +159,12 @@ nav {
   cursor: pointer;
 }
 
-#magnifyingGlassIcon {
+#magnifying-glass-icon {
   width: 13px;
   padding-left: 10px;
 }
 
-#microphoneIcon {
+#microphone-icon {
   width: 10px;
   margin-right: 10px;
   cursor: pointer;
@@ -173,14 +174,14 @@ nav {
 
 .right-hand-side-buttons {
   display: flex;
-  margin-left: 10px;
+  margin-left: 5%;
 }
 
-#findUsButton,
-#saveButton,
-#logInButton,
-#callButton,
-#magnifyingGlassIconBlack {
+#find-us-button,
+#save-button,
+#log-in-button,
+#call-button,
+#magnifying-glass-icon-black {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -189,41 +190,41 @@ nav {
   font-size: 9px;
 }
 
-#findUsButton,
-#saveButton,
-#logInButton,
-#callButton {
+#find-us-button,
+#save-button,
+#log-in-button,
+#call-button {
   width: 50px;
 }
 
-#findUsIcon,
-#saveIcon,
-#logInIcon {
+#find-us-icon,
+#save-icon,
+#log-in-icon {
   width: 20px;
   display: block;
 }
 
-#findUsIcon {
+#find-us-icon {
   margin: 3px 4.5px;
 }
 
-#findUsIcon:hover path,
-#saveIcon path:hover,
-#logInIcon:hover path {
+#find-us-icon:hover path,
+#save-icon path:hover,
+#log-in-icon:hover path {
   fill: #17a3a3;
 }
 
-#saveIcon,
-#logInIcon {
+#save-icon,
+#log-in-icon {
   margin: 6px 2px;
 }
 
-#callIcon {
+#call-icon {
   display: none;
   width: 20px;
 }
 
-#magnifyingGlassIconBlackImg {
+#magnifying-glass-icon-black-img {
   display: none;
   width: 20px;
 }
@@ -264,7 +265,7 @@ a {
   z-index: 9999;
 }
 
-.mobilebtn {
+.mobile-btn {
   z-index: 99999;
   background-color: #f2f2f2;
   border-width: 0;
@@ -287,7 +288,7 @@ a {
   touch-action: manipulation;
 }
 
-.mobilebtn:hover {
+.mobile-btn:hover {
   background-color: white;
 }
 
@@ -310,32 +311,32 @@ a {
   }
   
   .mobile-menu-toggle,
-  #callIcon,
-  #magnifyingGlassIconBlackImg {
+  #call-icon,
+  #magnifying-glass-icon-black-img {
     display: block;
   }
   
-  #magnifyingGlassIconBlackImg {
+  #magnifying-glass-icon-black-img {
     width: 25px;
     margin: 10px 5px;
   }
   
-  #saveIcon,
-  #logInIcon,
-  #callIcon {
+  #save-icon,
+  #log-in-icon,
+  #call-icon {
     width: 25px;
   }
   
-  #saveButton,
-  #logInButton,
-  #callButton {
+  #save-button,
+  #log-in-button,
+  #call-button {
     width: 30px;
     margin: 0 5px;
     /* border: 1px solid red; */
   }
   
-  #findUsButton,
-  .desktop-menu,
+  #find-us-button,
+  #desktop-menu,
   .search-bar,
   .right-hand-side-button-text {
     display: none;
@@ -355,7 +356,7 @@ a {
   margin-top: 4%;
 }
 
-#banner1img {
+#banner1-img {
   background-image: url("./Images/Hero-banner-desktop.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -364,11 +365,11 @@ a {
   transition: background-size 0.3s ease-in-out;
 }
 
-#banner1img:hover {
+#banner1-img:hover {
   background-size: 110%;
 }
 
-.banner1Text {
+.banner1-text {
   /* position: absolute;  */
   display: flex;
   flex-direction: column;
@@ -382,17 +383,17 @@ a {
   text-align: left;
 }
 
-#banner1Title {
+#banner1-title {
   font-size: 35px;
   margin-bottom: 10px;
   margin-top: 0;
 }
 
-#banner1Body {
+#banner1-body {
   font-weight: 200;
 }
 
-#banner1Button {
+#banner1-button {
   width: 150px;
 
   appearance: button;
@@ -422,17 +423,17 @@ a {
   touch-action: manipulation;
 }
 
-#banner1Button :disabled {
+#banner1-button :disabled {
   cursor: default;
 }
 
-#banner1Button :focus {
+#banner1-button :focus {
   box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
     rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
     rgba(50, 151, 211, 0.3) 0 0 0 4px;
 }
 
-#banner1Button:hover {
+#banner1-button:hover {
   background-color: #1bbdbd;
 }
 
@@ -448,7 +449,7 @@ a {
     margin-top: -60%;
   }
 
-  #banner1img {
+  #banner1-img {
     background-image: url("./Images/Hero-banner-mobile.jpg");
     background-size: 110%;
     object-fit: cover;
@@ -457,7 +458,7 @@ a {
     flex-direction: column;
   }
 
-  .banner1Text {
+  .banner1-text {
     background-color: #222222;
     display: flex;
     flex-direction: column;
@@ -469,19 +470,19 @@ a {
     text-align: center;
   }
 
-  #banner1Title {
+  #banner1-title {
     font-size: 30px;
     margin: 10% 60px 10px 60px;
   }
 
-  #banner1Body {
+  #banner1-body {
     font-weight: 200;
     margin: 0 30px 0 30px;
     line-height: 22px;
     font-size: 15px;
   }
 
-  #banner1Button {
+  #banner1-button {
     margin: auto;
     margin-top: 20px;
     width: 90%;
@@ -560,7 +561,7 @@ a {
   opacity: 1;
 }
 
-.cardimg {
+.card-img {
   width: 90%;
   height: 150px;
   object-fit: cover;
@@ -646,7 +647,7 @@ a {
     display: none;
   }
 
-  .cardimg {
+  .card-img {
     width: 90%;
     height: 150px;
     object-fit: cover;
@@ -697,7 +698,7 @@ a {
   width: 85%;
 }
 
-.banner2Text {
+.banner2-text {
   margin-left: 30px;
   width: 450px;
 }
@@ -724,7 +725,7 @@ a {
   padding: 0;
 }
 
-#banner2Button {
+#banner2-button {
   width: 210px;
 
   appearance: button;
@@ -754,7 +755,7 @@ a {
   touch-action: manipulation;
 }
 
-#banner2Button:hover {
+#banner2-button:hover {
   background-color: #1bbdbd;
 }
 
@@ -769,7 +770,7 @@ a {
     margin-top: 20px;
   }
 
-  .banner2Text {
+  .banner2-text {
     width: 90%;
     margin: 20px 0 30px 0;
   }
@@ -796,7 +797,7 @@ a {
     padding: 0;
   }
 
-  #banner2Button {
+  #banner2-button {
     width: 100%;
   }
 }
@@ -814,7 +815,7 @@ a {
   color: #ffffff;
 }
 
-.banner3Text {
+.banner3-text {
   margin-left: 30px;
   width: 450px;
 }
@@ -831,30 +832,30 @@ a {
   width: 510px;
 }
 
-.banner3SubSections {
+.banner3-subSections {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.banner3Time,
-.banner3number {
+.banner3-time,
+.banner3-number {
   font-size: 40px;
   margin: 0;
 }
 
-.banner3TimeText,
-.banner3numberText {
+.banner3-time-text,
+.banner3-number-text {
   font-size: 13px;
   font-weight: 200;
 }
 
-.banner3TimeText {
+.banner3-time-text {
   width: 150px;
 }
 
-.banner3numberText {
+.banner3-number-text {
   margin-right: 80px;
 }
 
@@ -865,7 +866,7 @@ a {
   padding: 0;
 }
 
-#banner3Button {
+#banner3-button {
   width: 150px;
 
   appearance: button;
@@ -895,7 +896,7 @@ a {
   touch-action: manipulation;
 }
 
-#banner3Button:hover {
+#banner3-button:hover {
   background-color: #1bbdbd;
 }
 
@@ -905,7 +906,7 @@ a {
     width: 100%;
   }
 
-  .banner3Text {
+  .banner3-text {
     width: 90%;
     margin: 20px 0 50px 0;
   }
@@ -923,35 +924,35 @@ a {
     margin: 10px 0;
   }
 
-  .banner3SubSections {
+  .banner3-subSections {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
   }
 
-  .banner3Time,
-  .banner3number {
+  .banner3-time,
+  .banner3-number {
     font-size: 32px;
     margin: 0;
   }
 
-  .banner3number {
+  .banner3-number {
     margin-top: 0;
   }
 
-  .banner3TimeText,
-  .banner3numberText {
+  .banner3-time-text,
+  .banner3-number-text {
     font-size: 15px;
     font-weight: 200;
     margin: 5px 0 20px 0;
   }
 
-  .banner3TimeText {
+  .banner3-time-text {
     width: 170px;
   }
 
-  .banner3numberText {
+  .banner3-number-text {
     margin-right: 0px;
   }
 
@@ -961,7 +962,7 @@ a {
     border-radius: 0;
   }
 
-  #banner3Button {
+  #banner3-button {
     width: 100%;
   }
 }

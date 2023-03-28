@@ -1,66 +1,8 @@
 /* _________HEADER ELEMENT__________ */
 
-/* ----DROPDOWN BUTTONS---- */
-
-// Toggle the specified dropdown content
-/* end of the HEADER element */
-/* _________MAIN ELEMENT: BANNER2__________ */
-
-function toggleDropdown (dropdownId) {
-  const dropdown = document.getElementById(dropdownId)
-  const dropdowns = document.getElementsByClassName('dropdown-content')
-  for (let i = 0; i < dropdowns.length; i++) {
-    const openDropdown = dropdowns[i]
-    if (openDropdown.classList.contains('show') && openDropdown !== dropdown) {
-      openDropdown.classList.remove('show')
-    }
-  }
-  dropdown.classList.toggle('show')
-}
-
-// Close the dropdown menus if the user clicks outside of them
-window.onclick = function (event) {
-  if (!event.target.matches('.dropbtn')) {
-    const dropdowns = document.getElementsByClassName('dropdown-content')
-    for (let i = 0; i < dropdowns.length; i++) {
-      const openDropdown = dropdowns[i]
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show')
-      }
-    }
-  }
-}
-
-/* -----SEARCH BAR------ */
-
-// Selects the microphone icon
-const microphoneIcon = document.getElementById('microphoneIcon')
-microphoneIcon.addEventListener('click', startDictation)
-
-// Triggers the browser to request access to the microphone once the icon is clicked
-// Recognizes when the user stops speaking
-function startDictation () {
-  const speechInput = document.getElementById('speech-input')
-
-  const recognition = new webkitSpeechRecognition()
-  recognition.continuous = false
-  recognition.interimResults = false
-
-  recognition.onresult = function (event) {
-    speechInput.value = event.results[0][0].transcript
-    recognition.stop()
-  }
-
-  recognition.onerror = function (event) {
-    console.error(event.error)
-    recognition.stop()
-  }
-
-  recognition.start()
-}
 /* ---- HAMBURGUR MENU ICON ----- */
 
-// Selecting the DOM elements
+// Selecting the necessary DOM elements
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle')
 const mobileMenu = document.querySelector('.mobile-menu')
 const screenSizeThreshold = 768
@@ -84,7 +26,67 @@ window.addEventListener('resize', function () {
   }
 })
 
-/* CARSDISPLAY */
+/* ----DROPDOWN BUTTONS---- */
+
+// Toggles the visibility of a dropdown menu with a given ID
+function toggleDropdown (dropdownId) {
+  const dropdown = document.getElementById(dropdownId)
+  const dropdowns = document.getElementsByClassName('dropdown-content')
+
+  for (let i = 0; i < dropdowns.length; i++) {
+    const openDropdown = dropdowns[i]
+    if (openDropdown.classList.contains('show') && openDropdown !== dropdown) {
+      openDropdown.classList.remove('show')
+    }
+  }
+  dropdown.classList.toggle('show')
+}
+
+// Close the dropdown menus if the user clicks outside of them
+window.onclick = function (event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName('dropdown-content')
+
+    for (let i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i]
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show')
+      }
+    }
+  }
+}
+
+/* end of the HEADER element */
+/* -----SEARCH BAR------ */
+
+// Selects the microphone icon
+const microphoneIcon = document.getElementById('microphone-icon')
+microphoneIcon.addEventListener('click', startDictation)
+
+// Triggers the browser to request access to the microphone once the icon is clicked
+// Recognizes when the user stops speaking
+function startDictation () {
+  const speechInput = document.getElementById('speech-input')
+
+  const recognition = new webkitSpeechRecognition()
+  recognition.continuous = false
+  recognition.interimResults = false
+
+  recognition.onresult = function (event) {
+    speechInput.value = event.results[0][0].transcript
+    recognition.stop()
+  }
+
+  recognition.onerror = function (event) {
+    console.error(event.error)
+    recognition.stop()
+  }
+
+  recognition.start()
+}
+
+/* end of the SEARCH BAR element */
+/* -----CARSDISPLAY----- */
 
 const carousel = document.querySelector('.gallery-wrapper')
 const cards = document.querySelectorAll('.item')
@@ -94,6 +96,7 @@ const buttonRight = document.querySelector('.arrow-right')
 let scrollPosition = 0
 const cardWidth = cards[0].getBoundingClientRect().width + 10 // Calculate the width of a single card by getting the bounding rectangle of the first card and adding a margin of 10 pixels
 
+// The eventListeners implement a responsive carousel gallery with left and right arrows to scroll through items in groups of three.
 buttonLeft.addEventListener('click', () => {
   scrollPosition -= cardWidth * 3
   carousel.scrollTo({
@@ -122,7 +125,8 @@ buttonRight.addEventListener('click', () => {
   })
 })
 
-/* BANNER2  */
+/* end of the  CARSDISPLAY element */
+/* -----BANNER2----- */
 
 // Change the banner2 body text deppending on screen size
 const spanTextElement = document.getElementById('text-content')

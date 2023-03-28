@@ -21,11 +21,11 @@
             class="mobile-menu-toggle"
           />
           <ul class="mobile-menu">
-            <li><a href="#" class="mobilebtn">New cars</a></li>
-            <li><a href="#" class="mobilebtn">Used cars</a></li>
-            <li><a href="#" class="mobilebtn">Servicing</a></li>
-            <li><a href="#" class="mobilebtn">Commercials</a></li>
-            <li><a href="#" class="mobilebtn">Motability</a></li>
+            <li><a href="#" class="mobile-btn">New cars</a></li>
+            <li><a href="#" class="mobile-btn">Used cars</a></li>
+            <li><a href="#" class="mobile-btn">Servicing</a></li>
+            <li><a href="#" class="mobile-btn">Commercials</a></li>
+            <li><a href="#" class="mobile-btn">Motability</a></li>
           </ul>
 
           <!-- company logo -->
@@ -37,13 +37,13 @@
             />
           </a>
         </div>
-        <div class="desktop-menu">
+        <div id="desktop-menu">
           <!-- new cars button -->
           <div class="dropdown">
-            <button onclick="toggleDropdown('newCars')" class="dropbtn">
+            <button onclick="toggleDropdown('new-cars')" class="dropbtn">
               New cars
             </button>
-            <div id="newCars" class="dropdown-content">
+            <div id="new-cars" class="dropdown-content">
               <a href="#">View All New Cars</a>
               <a href="#">Manufacturers</a>
               <a href="#">Available Today</a>
@@ -56,10 +56,10 @@
 
           <!-- used cars button -->
           <div class="dropdown">
-            <button onclick="toggleDropdown('usedCars')" class="dropbtn">
+            <button onclick="toggleDropdown('used-cars')" class="dropbtn">
               Used cars
             </button>
-            <div id="usedCars" class="dropdown-content">
+            <div id="used-cars" class="dropdown-content">
               <a href="#">View All Used Cars</a>
               <a href="#">Manufacturers</a>
               <a href="#">Approved used</a>
@@ -114,7 +114,7 @@
             <div class="search-box">
               <a href="#"
                 ><img
-                  id="magnifyingGlassIcon"
+                  id="magnifying-glass-icon"
                   src="./Images/magglass_icon.svg"
                   alt="magnifying glass icon"
               /></a>
@@ -123,7 +123,7 @@
                 placeholder="Search: “Make, model or location”"
               />
               <img
-                id="microphoneIcon"
+                id="microphone-icon"
                 src="./Images/microphone_icon.svg"
                 alt="microphone icon"
               />
@@ -134,19 +134,19 @@
         <!-- right-hand side buttons -->
 
         <div class="right-hand-side-buttons">
-          <div id="magnifyingGlassIconBlack">
+          <div id="magnifying-glass-icon-black">
             <a href="#"
               ><img
-                id="magnifyingGlassIconBlackImg"
-                class="magnifyingGlassIcon_mobile-view"
+                id="magnifying-glass-icon-black-img"
+                class="magnifying-glass-icon-mobile-view"
                 src="./Images/magglass_icon_black.svg"
                 alt="magnifying glass icon"
             /></a>
           </div>
-          <div id="findUsButton">
+          <div id="find-us-button">
             <a href="#">
               <svg
-                id="findUsIcon"
+                id="find-us-icon"
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
                 width="314.000000pt"
@@ -182,10 +182,10 @@
             </a>
           </div>
 
-          <div id="saveButton">
+          <div id="save-button">
             <a href="#">
               <svg
-                id="saveIcon"
+                id="save-icon"
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
                 width="348.000000pt"
@@ -217,10 +217,10 @@
             </a>
           </div>
 
-          <div id="logInButton">
+          <div id="log-in-button">
             <a href="#">
               <svg
-                id="logInIcon"
+                id="log-in-icon"
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
                 width="348.000000pt"
@@ -257,10 +257,10 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
             </a>
           </div>
 
-          <div id="callButton">
+          <div id="call-button">
             <a href="#">
               <img
-                id="callIcon"
+                id="call-icon"
                 src="./Images/phone_icon.svg"
                 alt="phone icon"
               />
@@ -273,14 +273,14 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
     <!-- BANNER1 -->
 
     <section class="banner1">
-      <span id="banner1img">
-        <div class="banner1Text">
-          <h2 id="banner1Title">Explore the new BMW i4 range</h2>
-          <p id="banner1Body">
+      <span id="banner1-img">
+        <div class="banner1-text">
+          <h2 id="banner1-title">Explore the new BMW i4 range</h2>
+          <p id="banner1-body">
             From the cool Trend and SUV-inspired Active to the sporty ST-Line,
             the eighth generation Fiesta impresses across the range.
           </p>
-          <button id="banner1Button">Book a test drive</button>
+          <button id="banner1-button">Book a test drive</button>
         </div>
       </span>
     </section>
@@ -305,7 +305,7 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
         <ul class="gallery">
           <li class="item current-item" id="card-1">
             <img
-              class="cardimg"
+              class="card-img"
               src="./Images/Trim-01.jpg"
               alt="Dark Blue M 50 Car"
             />
@@ -328,7 +328,7 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
 
           <li class="item current-item" id="card-2">
             <img
-              class="cardimg"
+              class="card-img"
               src="./Images/Trim-02.jpg"
               alt="White M Sport Car"
             />
@@ -352,7 +352,7 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
 
           <li class="item current-item" id="card-3">
             <img
-              class="cardimg"
+              class="card-img"
               src="./Images/Trim-03.jpg"
               alt="Black Sport Car"
             />
@@ -376,7 +376,7 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
 
           <li class="item current-item mobile-no-show" id="card-4">
             <img
-              class="cardimg"
+              class="card-img"
               src="./Images/Trim-04.jpeg"
               alt="Black Sport Car"
             />
@@ -396,7 +396,7 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
 
           <li class="item current-item mobile-no-show" id="card-5">
             <img
-              class="cardimg"
+              class="card-img"
               src="./Images/Trim-05.png"
               alt="Yellow Sport Car"
             />
@@ -416,7 +416,7 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
 
           <li class="item current-item mobile-no-show" id="card-6">
             <img
-              class="cardimg"
+              class="card-img"
               src="./Images/Trim-06.jpeg"
               alt="Yellow Sport Car"
             />
@@ -440,10 +440,10 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
     <!-- BANNER2 -->
 
     <section class="banner2">
-      <div class="banner2Text">
+      <div class="banner2-text">
         <h2 class="banner2-title">Explore the new BMW interior</h2>
         <p class="banner2-body"><span id="text-content"></span></p>
-        <button id="banner2Button"><span id="button-content"></span></button>
+        <button id="banner2-button"><span id="button-content"></span></button>
       </div>
       <img
         id="banner2-picture"
@@ -460,26 +460,26 @@ c79 -32 168 -116 208 -197 38 -78 48 -152 49 -353 0 -170 8 -201 59 -245 48
         src="./Images/Feature-02.jpg"
         alt="photo of a car being filled up"
       />
-      <div class="banner3Text">
+      <div class="banner3-text">
         <h2 class="banner3-title">Electrifying performance with the BMW i4</h2>
         <p class="banner3-body">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis
         </p>
-        <div class="banner3SubSections">
-          <div class="banner3SubText">
-            <h2 class="banner3Time">02:05 hr</h2>
-            <p class="banner3TimeText">
+        <div class="banner3-subSections">
+          <div class="banner3-subText">
+            <h2 class="banner3-time">02:05 hr</h2>
+            <p class="banner3-time-text">
               Charging at home for a Range of 62 miles
             </p>
           </div>
-          <div class="banner3SubText">
-            <h2 class="banner3number">365</h2>
-            <p class="banner3numberText">Electric range in miles</p>
+          <div class="banner3-subText">
+            <h2 class="banner3-number">365</h2>
+            <p class="banner3-number-text">Electric range in miles</p>
           </div>
         </div>
-        <button id="banner3Button">Book a test drive</button>
+        <button id="banner3-button">Book a test drive</button>
       </div>
     </section>
 
